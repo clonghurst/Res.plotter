@@ -23,4 +23,5 @@ rez.comp <- function(x,y,z) {
   plot(resid(fit.3),main="Sqrt Resid",ylab="Res.")
   abline(a=0,b=0)
   detach(z)
+  layout(matrix(c(1,1,1,1), 2, 2, byrow = TRUE))
 }
