@@ -9,19 +9,14 @@ vignette: >
   %\usepackage[utf8]{inputenc}
 ---
 
-The Res.plotter package contains one imperfect function, rez.comp() whose primary purpose is to provide an investigator a quick, easy way to compare the three common residuals plots (normal, logged, square-rooted) of his or her linear model.  Although residual diagnostics are not the end-all of model diagnostics, a quick look at the residuals of a model, along with the transformed residuals of that model, provides an easy way to spot common model problems (i.e. heteroskedasticity).  Currently, version 1.0 of this package only supports numerical data for the response variable, that is, this package does not support GLMs.  Below is some example code: 
+The Res.plotter package contains one imperfect function, rez.comp() whose primary purpose is to provide an investigator a quick, easy way to compare the three common residuals plots (normal, logged, square-rooted) of his or her linear model.  Although residual diagnostics are not the end-all of model diagnostics, a quick look at the residuals of a model, along with the transformed residuals of that model, provides an easy way to spot common model problems (i.e. heteroskedasticity).  Currently, version 1.0 of this package only supports numerical data for the response variable, that is, this package does not support GLMs.  Below is some example code:
 
 
-rez.comp(Sepal.Length,Sepal.Width,iris) 
-
+```{r example}
+library(Res.plotter)
+rez.comp(Sepal.Length,Sepal.Width,iris)
 x <- airquality$Ozone
-
 y <- airquality$Wind
-
 z<- airquality
-
 rez.comp(x,y,z)
-
-
-
-
+```
